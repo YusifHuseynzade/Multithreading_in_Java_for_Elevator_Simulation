@@ -1,3 +1,5 @@
+package elevator.simulation;
+
 import java.util.concurrent.TimeUnit;
 
 public class PassengerGenerator extends Thread {

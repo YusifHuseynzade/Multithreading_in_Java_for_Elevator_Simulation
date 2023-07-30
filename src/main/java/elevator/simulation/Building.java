@@ -1,3 +1,5 @@
+package elevator.simulation;
+
 public class Building {
     private int[] floors;
 

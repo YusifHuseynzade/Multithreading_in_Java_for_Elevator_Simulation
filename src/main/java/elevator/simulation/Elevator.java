@@ -1,3 +1,5 @@
+package elevator.simulation;
+
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -30,16 +32,16 @@ public class Elevator extends Thread {
             try {
                 int numPassengers = building.getWaitingCount(currentFloor);
                 if (numPassengers > 0) {
-                    System.out.println("Asansör " + getId() + " katta " + numPassengers + " insanı aldı.");
+                    System.out.println("Elevator " + getId() + " on the floor " + numPassengers + " took the human.");
                     building.getInElevator(currentFloor);
                 }
             } finally {
                 lock.unlock();
             }
 
-            // Elevator moving to the next floor
+            // org.example.Elevator moving to the next floor
             try {
-                TimeUnit.SECONDS.sleep(4); // Elevator speed
+                TimeUnit.SECONDS.sleep(2); // org.example.Elevator speed
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
